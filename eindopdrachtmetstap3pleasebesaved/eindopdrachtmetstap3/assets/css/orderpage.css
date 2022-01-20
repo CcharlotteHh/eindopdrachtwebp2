@@ -1,0 +1,222 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --background-purple: hsl(267,55%,11%);
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+
+    
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: hsl(267,55%,11%);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 50px;
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.container div{
+    padding: 5px;
+}
+
+/*navbar*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    border: 1px solid gray ;
+    border-radius: 9px;
+   
+    grid-column: 1/2;
+}
+
+.navbar li, a{
+    font-weight: 500;
+    font-size: 30px;
+    color:  hsl(275,87%,45%);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+
+.navlinks{
+    list-style: none;
+}
+
+.navlinks li{
+    display: inline-block;
+    padding:  0px 20px;
+}
+
+.navlinks li a{
+    transition: all 0.3 ease 0s;
+}
+
+.navlinks li a:hover{
+    color: black;
+}
+
+/*form*/
+.splitscreen{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.form-container{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.form-container h1{
+    font-size: 2.25rem;
+    font-weight: 700;
+}
+
+.form-container h2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.small{
+    font-size: 80%;
+    text-align: center;
+}
+
+.splitscreen{
+    display: flex;
+    flex-direction: column;
+}
+
+.left{
+    height: 100%;
+    width: 100%;
+}
+
+.left, .right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left{
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.5)),url(detailcatsmall4.jpg);
+    ;
+    background-size: cover;
+}
+
+.left .copy{
+    color: white;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing : grayscale;
+}
+
+.left p{
+    font-weight: 400;
+}
+
+.right .copy{
+    color: black;
+    text-align: center;
+}
+
+.right .copy p{
+    margin: 1.5em 0;
+    font-size: 0.875rem;
+}
+
+.right form{
+    max-height: 100%;
+    max-width: 100%;
+}    
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="tel"],
+form input[type="number"]{
+    max-width: 100%;
+    display: inline-block;
+    max-height: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
+    padding: 0.5em;
+}
+
+.form-container, .label{
+    display: block;
+    margin-bottom:0.5rem ;
+    font-size: 0.85em;
+    color: white;
+}
+.input-container{
+    display: flex;
+    justify-content: space-between;
+}
+.signup-btn{
+    display: block;
+    width: 100%;
+    background: var(--primary-blue);
+    color: white;
+    font-weight: 700;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.signup-btn:hover{
+    background: var(--background-purple);
+    cursor: pointer;
+}
+
+@media screen and (min-width:900px) {
+    .splitscreen{
+        flex-direction: row;
+        height: 100%;
+    }
+    .left,
+    .right{
+        display: flex;
+        width: 50%;
+        height: auto;
+    }
+    
+}
+/*form*/
+
+/*footer*/
+
+.footer{
+    display: flex;
+    justify-content: center;
+    grid-column: 1/ 2;
+}
+
+.copyright{
+    color: #f8f8ff ;
+}
+
